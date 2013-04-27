@@ -1,4 +1,4 @@
-/* global moment */
+/* global moment, alert */
 'use strict';
 
 $(function() {
@@ -130,10 +130,10 @@ $(function() {
 
       var value = $btn.data('value');
       if ($btn.attr('id') === 'btnYes') {
-        console.log('yes ' + value);
+        alert('yes ' + value);
         $('td[data-value=' + value + ']').addClass('spec');
       } else {
-        console.log('no ' + value);
+        alert('no ' + value);
         $('td[data-value=' + value + ']').removeClass('spec');
       }
       $('#btn').hide();
