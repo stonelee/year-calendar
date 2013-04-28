@@ -1,34 +1,38 @@
+@import "compass/reset";
 @import "compass/utilities";
 @import "compass/css3";
 
 @font-face {
-    font-family: "rei";
-    src: url("fonts/rei.eot?20130419"); /* IE9 */
-    src: url("fonts/rei.eot?20130419#iefix") format("embedded-opentype"), /* IE6-IE8 */
-    url("fonts/rei.woff?20130419") format("woff"), /* chrome 6+、firefox 3.6+、Safari5.1+、Opera 11+ */
-    url("fonts/rei.ttf?20130419")  format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
-    url("fonts/rei.svg?20130419#rei") format("svg"); /* iOS 4.1- */
+  font-family: "rei";
+  src: url("fonts/rei.eot?20130419"); /* IE9 */
+  src: url("fonts/rei.eot?20130419#iefix") format("embedded-opentype"), /* IE6-IE8 */
+  url("fonts/rei.woff?20130419") format("woff"), /* chrome 6+、firefox 3.6+、Safari5.1+、Opera 11+ */
+  url("fonts/rei.ttf?20130419")  format("truetype"), /* chrome、firefox、opera、Safari, Android, iOS 4.2+ */
+  url("fonts/rei.svg?20130419#rei") format("svg"); /* iOS 4.1- */
 }
 .iconfont {
-    font-family:"rei";
-    font-style: normal;
-    font-weight: normal;
-    font-size: 12px;
-    color: #4d4d4d;
-    cursor: default;
-    -webkit-font-smoothing: antialiased;
+  font-family:"rei";
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  color: #4d4d4d;
+  cursor: default;
+  -webkit-font-smoothing: antialiased;
 }
 
 #wrapper {
+  *zoom: 1;
   border: 1px solid;
+  font-size: 16px;
 }
 #navigate {
-  margin-bottom: -20px;
-
   font-size: 28px;
   line-height: 50px;
   text-align: center;
 
+  #currentYear {
+    margin: 0 50px;
+  }
   #lastYear,#nextYear {
     cursor: pointer;
     &:hover {
@@ -37,23 +41,23 @@
   }
 }
 
-ul#container {
+#container {
   @include clearfix;
-  list-style: none;
 }
 #container {
   li {
     float: left;
-    height: 220px;
+    height: 200px;
     margin: 3px 10px;
   }
   table {
     border-width: 1px 0 0 1px;
     border-style: solid;
-    border-spacing: 0;
   }
   caption {
-    font-size: 18px;
+    margin: 10px 0;
+    text-align: center;
+    font-size: 20px;
   }
   td, th {
     padding: 3px;
@@ -72,7 +76,7 @@ ul#container {
   display: none;
   position: absolute;
   width: 20px;
-  height: 20px;
+  height: 18px;
   border: 1px solid;
 
   .mask {

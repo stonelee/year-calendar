@@ -91,8 +91,8 @@ $(function() {
     function showBtn($td, btnShow, btnHide) {
       var pos = $td.position();
       $('#btn').css({
-        top: pos.top + 3,
-        left: pos.left + 1
+        top: pos.top + 2,
+        left: pos.left + 2
       }).show();
       $(btnShow).data('value', $td.attr('data-value')).show();
       $(btnHide).hide();
@@ -146,17 +146,19 @@ $(function() {
     delegateBtn();
   }
 
-  var currentYear = moment().year();
-  changeYear(currentYear);
-  progressBtn();
+  function run() {
+    var currentYear = moment().year();
+    changeYear(currentYear);
+    progressBtn();
 
-  $('#lastYear').click(function() {
-    changeYear(--currentYear);
-  });
-  $('#nextYear').click(function() {
-    changeYear(++currentYear);
-  });
+    $('#lastYear').click(function() {
+      changeYear(--currentYear);
+    });
+    $('#nextYear').click(function() {
+      changeYear(++currentYear);
+    });
+  }
 
-
+  run();
 
 });
